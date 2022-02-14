@@ -582,7 +582,7 @@ void ofxFFmpegRecorder::stop()
         m_CustomRecordingFile = nullptr;
         m_AddedVideoFrames = 0;
         m_AddedAudioFrames = 0;
-        joinThread();
+        // joinThread();
     }
     else if (m_DefaultRecordingFile) {
         fwrite("q", sizeof(char), 1, m_DefaultRecordingFile);
@@ -606,7 +606,7 @@ void ofxFFmpegRecorder::cancel()
         m_CustomRecordingFile = nullptr;
         m_AddedVideoFrames = 0;
         m_AddedAudioFrames = 0;
-        joinThread();
+        // joinThread();
     }
     else if (m_DefaultRecordingFile) {
         fwrite("q", sizeof(char), 1, m_DefaultRecordingFile);
